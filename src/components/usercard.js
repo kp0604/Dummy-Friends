@@ -1,4 +1,6 @@
+
 const UserCard = (props) => {
+    console.log("inusercard")
     console.log(props.userObj)
     return (<div className="cardComp">
         {

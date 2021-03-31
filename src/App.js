@@ -37,7 +37,7 @@ function App() {
         setUserObj(data.results[0])
         console.log(userObj)
       })
-  }, [])
+  }, [userObj])
 
   return (
     <div className="App">
@@ -45,9 +45,9 @@ function App() {
         <Header />
         {/* <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} /> */}
         <Switch>
-          <Route path="/home" component={() => <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} />} />
+          <Route path="/home" component={()=><UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} />} />
           <Route path="/friends" component={() => <Friends friendObj={friendObj} />} />
-          <Redirect path="/home" />
+          <Redirect path="/home"  />
         </Switch>
         <Footer />
       </BrowserRouter>
