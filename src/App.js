@@ -35,6 +35,7 @@ function App() {
         console.log("inFetchData")
         console.log(userObj)
         setUserObj(data.results[0])
+
         console.log(userObj)
       })
   }, [])
@@ -45,9 +46,10 @@ function App() {
         <Header />
         {/* <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} /> */}
         <Switch>
-          <Route path="/home" component={()=><UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} />} />
+          <Route path="/" component={() => <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} />} />
+          <Route path="/home" component={() => <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} />} />
           <Route path="/friends" component={() => <Friends friendObj={friendObj} />} />
-          <Redirect path="/home"  />
+          <Redirect path="/" />
         </Switch>
         <Footer />
       </BrowserRouter>
