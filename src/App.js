@@ -47,8 +47,8 @@ function App() {
         {/* <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} /> */}
         <Switch>
           <Route path="/" component={() => <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} />} />
-          <Route path="/home" component={() => <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} />} />
-          <Route path="/friends" component={() => <Friends friendObj={friendObj} />} />
+          <Route exact path="/home" component={() => <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} />} />
+          <Route excat path="/friends" component={() => <Friends friendObj={friendObj} />} />
           <Redirect path="/" />
         </Switch>
         <Footer />
