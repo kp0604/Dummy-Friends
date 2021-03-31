@@ -37,7 +37,7 @@ function App() {
         setUserObj(data.results[0])
         console.log(userObj)
       })
-  }, [userObj])
+  }, [])
 
   return (
     <div className="App">
