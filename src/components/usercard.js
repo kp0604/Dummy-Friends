@@ -18,7 +18,16 @@ const UserCard = (props) => {
                 </div>
             </div>
 
-                : <div> </div>
+                : <div className="card" >
+
+                    <img className="pic" alt="user.img" />
+
+                    <div className="cardinfo">
+                        <span className="nameTag">Loading....</span>
+
+                        <span className="addtag"></span>
+                    </div>
+                </div>
 
         }
         <div className="carBtn">
