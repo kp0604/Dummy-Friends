@@ -46,8 +46,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border:3px solid blue; */
-  margin-top: 4em;
+  
+  /* border:3px solid ; */
+  /* margin: auto; */
+  padding:2em 0em 2em 0em;
 }
 
 .card {
@@ -56,19 +58,20 @@
   flex-wrap: wrap;
   border: 2px solid grey;
   border-radius: 25px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin-bottom: 5%;
-  padding: 2em;
-  /* height: ; */
-  box-shadow: 8px 8px rgb(214, 213, 213);
+  margin: 1em 2em 4em 2em;
+  padding: 1em;
+  
+  box-shadow: 8px 8px 8px 8px rgb(214, 213, 213);
 }
 
 .cardinfo {
   display: flex;
   flex-direction: column;
-  padding: 2em;
-  margin: 4em;
+
+  padding: 5em 0em 5em 0em;
+  /* margin: em; */
   /* margin-left: 3em; */
 }
 
@@ -80,6 +83,7 @@
 .pic {
   border: 2px solid orange;
   border-radius: 50%;
+  margin: 1em 0em 1em 0em;
   padding: 3px;
   height: 11em;
   width: 11em;
@@ -96,24 +100,24 @@
   font-size: large;
   color: white;
   background-color: rgb(214, 113, 19);
-  border-radius: 5%;
+  border-radius: 50%;
   /* border: 2px solid teal ; */
   margin: 1em;
   /* padding: 0.5em; */
-  height: 2em;
-  width: 4em;
+  height: 4.5em;
+  width: 4.5em;
 }
 
 .btn1 {
   font-size: large;
   color: white;
   background-color: rgb(18, 134, 66);
-  border-radius: 5%;
+  border-radius: 50%;
   /* border: 2px solid teal ; */
   margin: 1em;
   /* padding: 0.5em; */
-  height: 2em;
-  width: 4em;
+  height: 4.5em;
+  width: 4.5em;
 }
 
 .btn:hover {
