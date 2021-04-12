@@ -3,35 +3,39 @@ const Friends = (props) => {
     console.log(props.friendObj)
 
     return (
-        <div className="friendComp">
-            <h2>Friend List</h2>
-            {/* <div className="line"></div> */}
-            {props.friendObj !== null ?
+        <div className="friends">
+            <div className="friendComp">
+                <div className="friendh">Friend List</div>
+                {/* <div className="line"></div> */}
+                {props.friendObj !== null ?
 
-                props.friendObj.map((friend, idx) => <div className="friendCard" key={idx}>
+                    props.friendObj.map((friend, idx) => <div className="friendCard" key={idx}>
+                        <div className="fpicdiv">
+                            <img className="fpic" src={friend.picture.large} alt="user.img" />
+                            </div>
 
-                    <img className="fpic" src={friend.picture.large} alt="user.img" />
-
-                    <div className="fcardinfo">
-                        <span className="nameTag">{friend.name.title + ". " + friend.name.first + " " + friend.name.last}</span>
+                        <ul className="fcardinfo">
+                            <li className="fcdli fnameTag">{friend.name.title + ". " + friend.name.first + " " + friend.name.last}</li>
 
 
-                        <span className="addTag">{
-                            friend.location.street.name + ", "
-                            + friend.location.city + ", " + friend.location.state}</span>
-                        {/* <span className="addTag">{friend.location.street.number + " " +
+                            <li className="fcdli faddTag">{
+                               
+                                friend.location.city + ", " + friend.location.state}</li>
+                            <li className="fcdli fmailTag">Email id: {friend.email}
+                            </li>
+                            {/* <span className="addTag">{friend.location.street.number + " " +
                             friend.location.street.name + ", "
                             + friend.location.city + ", " + friend.location.state}</span> */}
+                        </ul>
+                    </div>)
+                    : <div className="emptyfriends" >
+                        <span className="spanf">  Add Some Friends !</span>
                     </div>
-                </div>)
-                : <div >
-                    <p>Add some friends</p>
-                </div>
 
-            }
+                }
 
+            </div>
         </div>
-
     )
 
 

@@ -15,8 +15,6 @@ function App() {
 
   console.log(friendObj)
 
-
-
   function fetchData() {
     fetch('https://randomuser.me/api/').then(res => res.json())
       .then((data) => {
