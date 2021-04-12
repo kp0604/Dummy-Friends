@@ -1,0 +1,326 @@
+.App {
+  text-align: center;
+}
+
+.Appinfo {
+  background-color: yellowgreen;
+  font-size: 1.5em;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  /* background-color:teal; */
+  background-color: #e52165;
+  width: 100%;
+}
+
+.logo {
+  font-size: xx-large;
+  font-weight: 100;
+  color: floralwhite;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+  display: flex;
+  padding: 1.5em;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.span {
+  color: white;
+  padding: 1em;
+}
+
+.userCard {
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+}
+
+.cardComp {
+  max-width: 750px;
+  flex-basis: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.card {
+  border: 2px solid black;
+  /* url("bg21.jpg"); */
+  background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.013)),
+    url("bgs/bg23.jpg");
+  /* linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.013)), */
+  /* url("https://source.unsplash.com/1366x768/? city"); */
+  background-size: cover;
+  /* box-shadow: 5px  solid grey; */
+  /* background-color: #e52165; */
+  /* background-color:; */
+  /* background-color:teal; */
+  border-radius: 5px;
+  margin: 1.5em;
+  /* max-width: 450px; */
+  /* min-width: 350px;; */
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 1;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+}
+
+.upicdiv {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pic {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 50%;
+  height: 10em;
+  width: 10em;
+}
+
+.cardinfo {
+  list-style: none;
+  padding: 0;
+
+  flex-grow: 2;
+  flex-shrink: 2;
+  flex-basis: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cdli {
+  color: white;
+  word-wrap: break-word;
+  flex-basis: 1;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.nameTag {
+  font-size: 2.5em;
+  font-family: monospace;
+}
+
+.addtag {
+  font-size: 1.5em;
+  font-family: monospace;
+}
+
+.emailTag {
+  font-size: 1.5em;
+  font-family: monospace;
+}
+
+.cardBtn {
+  /* bottom:10vh; */
+  flex-grow: 0.5;
+  flex-shrink: 0.5;
+  flex-basis: 1;
+  justify-content: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  font-size: large;
+  outline: none;
+  color: black;
+  background-color: rgb(255, 174, 0);
+  border-radius: 5% 50% 50% 50%;
+  border: none;
+  margin: 0em 1em 0em 0em;
+  /* padding: 0.5em; */
+  height: 4em;
+  width: 4em;
+}
+
+.btn1 {
+  font-size: large;
+  outline: none;
+  color: black;
+  background-color: rgb(5, 207, 5);
+  box-shadow: 2px black;
+  border-radius: 50% 5% 50% 50%;
+  border: none;
+  margin: 0em 0em 0em 1em;
+  /* padding: 0.5em; */
+  height: 4em;
+  width: 4em;
+}
+
+.btn:hover {
+  background-color: rgb(255, 145, 42);
+}
+.btn1:hover {
+  background-color: rgb(21, 163, 80);
+}
+
+.btn:active {
+  background-color: rgb(255, 166, 0);
+  box-shadow: 0 3px rgb(168, 168, 168);
+  transform: translateY(2px);
+}
+.btn1:active {
+  background-color: rgb(30, 255, 0);
+  box-shadow: 0 3px rgb(168, 168, 168);
+  transform: translateY(2px);
+}
+
+.line {
+  border: 1px solid black;
+  width: 70%;
+}
+
+.friends {
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+}
+
+.friendh {
+  text-align: start;
+  font-size: x-large;
+  padding: 0.7em;
+}
+
+.friendComp {
+  max-width: 700px;
+  padding: 1em;
+  flex-basis: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.friendCard {
+  margin: 5px 0px 5px 0px;
+  /* padding: 5px 0px 5px 0px; */
+  border: 2px solid teal;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.fpicdiv {
+  padding: 4px;
+  min-width: 10em;
+  min-height: 2em;
+  /* flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 1; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fpic {
+  height: 6em;
+  width: 6em;
+  border-radius: 50%;
+}
+
+.fcardinfo {
+  list-style: none;
+  padding: 0;
+
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* flex-basis: 2; */
+}
+
+.fcdli {
+  /* color: white; */
+  word-wrap: break-word;
+}
+
+.fnameTag {
+  font-size: x-large;
+  font-family: monospace;
+}
+
+.faddTag {
+  font-size: large;
+  font-family: monospace;
+}
+
+.fmailTag {
+  font-family: monospace;
+  font-size: large;
+}
+
+.emptyfriends {
+  display: flex;
+  justify-content: center;
+  /* text-align: justify; */
+  align-items: center;
+  /* align-content: center; */
+  min-height: 50vh;
+  font-weight: 100;
+  font-size: 5em;
+  flex-grow: 1;
+}
+
+.footer {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: white;
+  /* border: 3px solid black; */
+  color: whitesmoke;
+  padding: 1px;
+  /* position: fixed; */
+  /* bottom: 0; */
+  width: 100%;
+}
+
+@media only screen and (max-width: 868px) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
