@@ -46,7 +46,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={() => <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} />} />
           <Route exact path="/home" component={() => <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} />} />
-          <Route excat path="/friends" component={() => <Friends friendObj={friendObj} />} />
+          <Route exact path="/friends" component={() => <Friends friendObj={friendObj} />} />
           <Redirect path="/" />
         </Switch>
         <Footer />

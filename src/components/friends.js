@@ -5,21 +5,21 @@ const Friends = (props) => {
     return (
         <div className="friends">
             <div className="friendComp">
-                <div className="friendh">Friend List</div>
+                <div className="friendh">Friends List</div>
                 {/* <div className="line"></div> */}
                 {props.friendObj !== null ?
 
                     props.friendObj.map((friend, idx) => <div className="friendCard" key={idx}>
                         <div className="fpicdiv">
                             <img className="fpic" src={friend.picture.large} alt="user.img" />
-                            </div>
+                        </div>
 
                         <ul className="fcardinfo">
                             <li className="fcdli fnameTag">{friend.name.title + ". " + friend.name.first + " " + friend.name.last}</li>
 
 
                             <li className="fcdli faddTag">{
-                               
+
                                 friend.location.city + ", " + friend.location.state}</li>
                             <li className="fcdli fmailTag">Email id: {friend.email}
                             </li>
