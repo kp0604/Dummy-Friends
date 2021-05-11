@@ -13,7 +13,7 @@ function App() {
   const [userObj, setUserObj] = useState(null)
   const [friendObj, setFriendObj] = useState(null)
 
-  console.log(friendObj)
+  // console.log(friendObj)
 
   function fetchData() {
     fetch('https://randomuser.me/api/').then(res => res.json())
@@ -21,8 +21,8 @@ function App() {
         console.log("inFetchData3")
         setUserObj(data.results[0])
         // window.scroll({ top: 100000, behavior: 'smooth' })
-        console.log(userObj)
-        console.log(friendObj)
+        // console.log(userObj)
+        // console.log(friendObj)
 
       })
   }
@@ -30,11 +30,11 @@ function App() {
   useEffect(function fetchData() {
     fetch('https://randomuser.me/api/').then(res => res.json())
       .then((data) => {
-        console.log("inFetchData")
-        console.log(userObj)
+        // console.log("inFetchData")
+        // console.log(userObj)
         setUserObj(data.results[0])
 
-        console.log(userObj)
+        // console.log(userObj)
       })
   }, [])
 

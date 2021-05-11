@@ -1,12 +1,10 @@
 const UserCard = (props) => {
-    console.log("inusercard");
-    console.log(props.userObj);
+    // console.log("inusercard");
+    // console.log(props.userObj);
     return (
         <div className="userCard">
             <div className="cardComp">
-                {/* <div className="Appinfo">
-                In Meeto you can Know about People around the Globe ...Happy Searching!!
-                 </div> */}
+                
 
                 {props.userObj !== null ? (
                     <div className="card">
@@ -65,8 +63,8 @@ const UserCard = (props) => {
                                 : props.setFriendObj([props.userObj]);
                             props.fetchData();
                             // alert("ADDED TO FRIENDS LIST");
-                            console.log(props.userObj);
-                            console.log("next is clicked");
+                            // console.log(props.userObj);
+                            // console.log("next is clicked");
                         }}
                     >
                         ADD
