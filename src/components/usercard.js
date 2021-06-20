@@ -1,20 +1,50 @@
 const UserCard = (props) => {
     // console.log("inusercard");
     // console.log(props.userObj);
+
+    const handleClick = () => {
+        if (props.friendObj == null) {
+            console.log('innot')
+            localStorage.setItem('Flocal', JSON.stringify([props.userObj]))
+            props.setFriendOb(JSON.parse(localStorage.getItem('Flocal')))
+            props.fetchData();
+        }
+        else {
+            
+            console.log('in')
+            console.log([...props.friendObj, props.userObj])
+            localStorage.setItem('Flocal', JSON.stringify([...props.friendObj, props.userObj]))
+
+
+            console.log(JSON.parse(localStorage.getItem('Flocal')))
+            // console.log(typeof(flocal))
+            props.setFriendOb(JSON.parse(localStorage.getItem('Flocal')))
+            console.log('after')
+            props.fetchData();
+
+
+            // alert("ADDED TO FRIENDS LIST");
+            // console.log(props.userObj);
+            // console.log("next is clicked");
+        }
+    }
+        
+    
+   
+
     return (
         <div className="userCard">
             <div className="cardComp">
-                
 
                 {props.userObj !== null ? (
                     <div className="card">
                         <div className="upicdiv">
-                        <img
-                            className="pic"
-                            src={props.userObj.picture.large}
-                            alt="user.img"
+                            <img
+                                className="pic"
+                                src={props.userObj.picture.large}
+                                alt="user.img"
                             />
-                            </div>
+                        </div>
 
                         <ul className="cardinfo">
                             <li className="cdli nameTag">{props.userObj.name.title +
@@ -36,18 +66,17 @@ const UserCard = (props) => {
                     </div>
                 )
                     : (
-                    <div className="card">
-                        <img className="pic" alt="user.img" />
+                        <div className="card">
+                            <img className="pic" alt="user.img" />
 
-                        <div className="cardinfo">
-                            <span className="nameTag">Loading....</span>
+                            <div className="cardinfo">
+                                <span className="nameTag">Loading....</span>
 
-                            <span className="addtag"></span>
+                                <span className="addtag"></span>
+                            </div>
                         </div>
-                        </div>
-                        
+
                     )}
-                
 
                 <div className="cardBtn">
 
@@ -57,23 +86,15 @@ const UserCard = (props) => {
 
                     <button
                         className="btn1"
-                        onClick={() => {
-                            props.friendObj !== null
-                                ? props.setFriendObj([...props.friendObj, props.userObj])
-                                : props.setFriendObj([props.userObj]);
-                            props.fetchData();
-                            // alert("ADDED TO FRIENDS LIST");
-                            // console.log(props.userObj);
-                            // console.log("next is clicked");
-                        }}
+                        onClick={()=>handleClick()}
                     >
                         ADD
                      </button>
-                    
+
                 </div>
             </div>
-        </div>
-    );
+        </div >
+    )
 };
 
 export default UserCard;

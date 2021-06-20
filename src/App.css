@@ -215,7 +215,7 @@
 
 .friendCard {
   margin: 5px 0px 5px 0px;
-  /* padding: 5px 0px 5px 0px; */
+  padding: 10px 0px 10px 0px;
   border: 2px solid teal;
   display: flex;
   flex-wrap: wrap;
@@ -223,20 +223,21 @@
   align-items: center;
 }
 .fpicdiv {
-  padding: 4px;
+  padding: 10px;
   min-width: 10em;
   min-height: 2em;
   /* flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 1; */
   display: flex;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
 }
 
 .fpic {
-  height: 6em;
-  width: 6em;
+  height: 5em;
+  width: 5em;
   border-radius: 50%;
 }
 
@@ -267,6 +268,21 @@
 .fmailTag {
   font-family: monospace;
   font-size: large;
+}
+
+.delBtndiv{
+  padding:20px;
+  /* width:100%; */
+
+ 
+}
+
+.delBtn{
+  width:100%;
+  /* color:red; */
+   /* background-color:red; */
+  
+
 }
 
 .emptyfriends {

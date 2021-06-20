@@ -13,12 +13,17 @@ function App() {
   const [userObj, setUserObj] = useState(null)
   const [friendObj, setFriendObj] = useState(null)
 
-  // console.log(friendObj)
+
+  console.log(friendObj)
+  
+  useEffect(() => {console.log('inef')
+    setFriendObj(JSON.parse(localStorage.getItem('Flocal')))
+  }, [])
 
   function fetchData() {
     fetch('https://randomuser.me/api/').then(res => res.json())
       .then((data) => {
-        console.log("inFetchData3")
+        // console.log("inFetchData3")
         setUserObj(data.results[0])
         // window.scroll({ top: 100000, behavior: 'smooth' })
         // console.log(userObj)
@@ -44,9 +49,11 @@ function App() {
         <Header />
         {/* <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} /> */}
         <Switch>
-          <Route exact path="/" component={() => <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} />} />
-          <Route path="/home" component={() => <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} />} />
-          <Route path="/friends" component={() => <Friends friendObj={friendObj} />} />
+          {/* <Route exact path="/" component={() => <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} />} /> */}
+          <Route exact path="/" component={() => <UserCard userObj={userObj} friendObj={friendObj} setFriendOb={(x)=>setFriendObj(x)} fetchData={() => fetchData()} />} />
+          {/* <Route path="/home" component={() => <UserCard userObj={userObj} friendObj={friendObj} setFriendObj={(fD) => setFriendObj(fD)} fetchData={() => fetchData()} />} /> */}
+          <Route path="/home" component={() => <UserCard userObj={userObj}  friendObj={friendObj} setFriendOb={(x)=>setFriendObj(x)} fetchData={() => fetchData()} />} />
+          <Route path="/friends" component={() => <Friends friendObj={friendObj} setFriendOb={(x) => setFriendObj(x)} />} />
           <Redirect path="/" />
         </Switch>
         <Footer />

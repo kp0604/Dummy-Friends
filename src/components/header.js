@@ -6,7 +6,7 @@ function Header(props) {
     return (
 
         <div class="header">
-            <span className="logo"><i className="fa fa-handshake"></i> Meets</span>
+            <span className="logo"><i className="fa fa-handshake"></i> Dummy</span>
             <div className="nav">
                 <span><Link className="span" to="/home"><i className="fa fa-home"></i> Home</Link> </span>
 
